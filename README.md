@@ -28,7 +28,7 @@ In the PiHole LXC console, run the following command:
 $ curl -fsSL https://tailscale.com/install.sh | sh
 ```
 
-Once successfully installed, then run the following, noting the addition of *--accept-dns=false*.
+Once successfully installed, then run the following, noting the addition of *--accept-dns=false* to the command.
 
 ```
 $ tailscale up --accept-dns=false

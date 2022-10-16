@@ -5,7 +5,7 @@ This guide details how to install Tailscale on a PiHole LXC and route your DNS v
 
 ## Modify PiHole LXC
 
-**You need to make modifications to your PiHole LXC to get it to run. Without this, Tailscale will not run; this is not in the Tailscale guide linked above!** Within your Shell Console for your VE, you need to edit the PiHole LXC Configuration file (change the number to your relevant LXC conf):
+***You need to make modifications to your PiHole LXC to get it to run. Without this, Tailscale will not run; this is not in the Tailscale guide linked above!*** Within your Shell Console for your VE, you need to edit the PiHole LXC Configuration file (change the number to your relevant LXC conf):
 
 ```
 $ nano /etc/pve/lxc/116.conf

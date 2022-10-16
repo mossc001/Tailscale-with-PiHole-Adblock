@@ -5,7 +5,7 @@ This guide details how to install Tailscale on a PiHole LXC and route your DNS v
 
 ## Modify PiHole LXC
 
-You need to make modifications to your PiHole LXC to get it to run. Without this, Tailscale will not run; this is not in the Tailscale guide linked above! Within your Shell Console for your VE, you need to edit the PiHole LXC Configuration file (change the number to your relevant LXC conf):
+**You need to make modifications to your PiHole LXC to get it to run. Without this, Tailscale will not run; this is not in the Tailscale guide linked above!** Within your Shell Console for your VE, you need to edit the PiHole LXC Configuration file (change the number to your relevant LXC conf):
 
 ```
 $ nano /etc/pve/lxc/116.conf
@@ -39,11 +39,11 @@ Follow the onscreen instructions and copy the URL into a browser to authorise th
 ## Modify Tailscale & PiHole for DNS Ad Blocking
 #### DNS Override
 
-You can configure DNS for your entire Tailscale network from Tailscale’s admin console. Go to the DNS page and enter your PiHole Tailscale IP address as a global nameserver.
+You can configure DNS for your entire Tailscale network from Tailscale’s admin console. Go to the **DNS** page and enter your PiHole Tailscale IP address as a **Global Nameserver**.
 
 Since we want our network-wide DNS to override any local DNS settings that devices have, make sure you enable the Override local DNS toggle after adding your PiHole's Tailscale IP address.
 
 #### PiHole Permit All Origins
-In the Pi-hole Admin page in Settings > DNS, make sure that Listen on all interfaces, permit all origins is selected.
+In the Pi-hole Admin page in **Settings** > **DNS**, make sure that within **Interface Settings**, **'Permit all origins'** is selected.
 
 Tailscale traffic comes in on the tailscale0 network interface, so this option is needed to allow your Pi-Hole to respond to Tailscale-based DNS traffic. When using this option, make sure your Pi-Hole is properly firewalled.

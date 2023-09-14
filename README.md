@@ -34,6 +34,12 @@ Once successfully installed, then run the following, noting the addition of *--a
 $ tailscale up --accept-dns=false
 ```
 
+The full command to expose your subnet as well as advertise as an exit node can be done with the below command:
+
+```
+tailscale up --accept-dns=false --advertise-exit-node --advertise-routes=192.168.1.0/24
+```
+
 Follow the onscreen instructions and copy the URL into a browser to authorise the Tailscale connection. Once confirmed, your Tailscale PiHole device shoudl be visible in your *Machines* overview of the Tailscale web portal: https://login.tailscale.com/admin/machines
 
 ## Modify Tailscale & PiHole for DNS Ad Blocking
